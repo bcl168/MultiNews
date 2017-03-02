@@ -72,10 +72,10 @@
             </objects>
             <point key="canvasLocation" x="1862" y="238"/>
         </scene>
-        <!--View Controller-->
+        <!--WebviewVC-->
         <scene sceneID="2Qk-ZL-yLf">
             <objects>
-                <viewController id="VFT-Hu-LoG" sceneMemberID="viewController">
+                <viewController id="VFT-Hu-LoG" customClass="WebviewVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="j5X-mP-Fxy"/>
                         <viewControllerLayoutGuide type="bottom" id="MRN-xU-QAg"/>
