@@ -13,6 +13,8 @@
 		60C606E81E68CD15006D8453 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60C606E61E68CD15006D8453 /* Main.storyboard */; };
 		60C606EA1E68CD15006D8453 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60C606E91E68CD15006D8453 /* Assets.xcassets */; };
 		60C606ED1E68CD15006D8453 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60C606EB1E68CD15006D8453 /* LaunchScreen.storyboard */; };
+		60C606F91E68CFD6006D8453 /* Article.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C606F51E68CFD6006D8453 /* Article.m */; };
+		60C606FA1E68CFD6006D8453 /* NewsFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C606F71E68CFD6006D8453 /* NewsFeed.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,11 @@
 		60C606E91E68CD15006D8453 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		60C606EC1E68CD15006D8453 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		60C606EE1E68CD15006D8453 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		60C606F41E68CFD6006D8453 /* Article.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Article.h; sourceTree = "<group>"; };
+		60C606F51E68CFD6006D8453 /* Article.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Article.m; sourceTree = "<group>"; };
+		60C606F61E68CFD6006D8453 /* NewsFeed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsFeed.h; sourceTree = "<group>"; };
+		60C606F71E68CFD6006D8453 /* NewsFeed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsFeed.m; sourceTree = "<group>"; };
+		60C606F81E68CFD6006D8453 /* SecretKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecretKey.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +65,11 @@
 		60C606DC1E68CD15006D8453 /* MultiNews */ = {
 			isa = PBXGroup;
 			children = (
+				60C606F41E68CFD6006D8453 /* Article.h */,
+				60C606F51E68CFD6006D8453 /* Article.m */,
+				60C606F61E68CFD6006D8453 /* NewsFeed.h */,
+				60C606F71E68CFD6006D8453 /* NewsFeed.m */,
+				60C606F81E68CFD6006D8453 /* SecretKey.h */,
 				60C606E01E68CD15006D8453 /* AppDelegate.h */,
 				60C606E11E68CD15006D8453 /* AppDelegate.m */,
 				60C606E31E68CD15006D8453 /* ViewController.h */,
@@ -150,8 +162,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60C606F91E68CFD6006D8453 /* Article.m in Sources */,
 				60C606E51E68CD15006D8453 /* ViewController.m in Sources */,
 				60C606E21E68CD15006D8453 /* AppDelegate.m in Sources */,
+				60C606FA1E68CFD6006D8453 /* NewsFeed.m in Sources */,
 				60C606DF1E68CD15006D8453 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
