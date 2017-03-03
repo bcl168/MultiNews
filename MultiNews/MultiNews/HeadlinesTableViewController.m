@@ -10,6 +10,7 @@
 #import "DetailViewController.h"
 
 #define  darkBlueColor colorWithRed:20/255.0f green:50/255.0f blue:135/255.0f alpha:1.0
+#define  darkBlueColor colorWithRed:20/255.0f green:50/255.0f blue:135/255.0f alpha:1.0
 
 @interface HeadlinesTableViewController ()
 
