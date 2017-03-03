@@ -8,7 +8,7 @@
 
 #import "HeadlinesTableViewController.h"
 #import "DetailViewController.h"
-#define  darkBlueColor colorWithRed:55/255.0f green:120/255.0f blue:255/255.0f alpha:1.0
+#define  darkBlueColor colorWithRed:20/255.0f green:50/255.0f blue:135/255.0f alpha:1.0
 
 @interface HeadlinesTableViewController ()
 
@@ -151,6 +151,9 @@
             // display the "cached" image
             cell.articleImage.image = [UIImage imageWithData:article.imageData];
     }
+    else
+        // imageURL not provided by news source so, put placeholder image 
+        cell.articleImage.image = [UIImage imageNamed:@"news.jpg"];
 
     cell.headline.text = article.headlines;
     cell.summary.text = article.blurb;
