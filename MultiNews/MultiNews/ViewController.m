@@ -32,6 +32,8 @@
     NSArray *objs = [NSArray arrayWithObjects: [UIColor darkGrayColor], [UIFont fontWithName:@"HelveticaNeue" size:20.0f], nil];
     self.navigationController.navigationBar.titleTextAttributes = [NSDictionary dictionaryWithObjects:objs forKeys:keys];
     
+    
+    
     _newsSourceNames = @[@"Associated Press", @"BBC News", @"CNBC", @"CNN", @"Google News", @"IGN", @"Mirror", @"Recode", @"TechCrunch", @"TechRadar"];
     _newsSourceIds = @[@"associated-press", @"bbc-news", @"cnbc", @"cnn", @"google-news", @"ign", @"mirror", @"recode", @"techcrunch", @"techradar"];
     self.newsPickerView.dataSource = self;

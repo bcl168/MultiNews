@@ -152,7 +152,7 @@
             cell.articleImage.image = [UIImage imageWithData:article.imageData];
     }
     else
-        // imageURL not provided by news source so, put placeholder image 
+        // imageURL not provided by news source so, put placeholder image
         cell.articleImage.image = [UIImage imageNamed:@"news.jpg"];
 
     cell.headline.text = article.headlines;
