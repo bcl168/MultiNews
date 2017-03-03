@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="fC3-AD-wT7">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="fC3-AD-wT7">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -67,9 +67,9 @@
                                     <constraint firstAttribute="width" secondItem="uMq-nY-WxZ" secondAttribute="height" multiplier="125:201" id="9Qs-Ii-BVv"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="o0z-1f-r5f">
+                            <imageView userInteractionEnabled="NO" alpha="0.25" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="o0z-1f-r5f">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <color key="backgroundColor" cyan="0.42440688939999999" magenta="0.2548828125" yellow="0.57397260679999995" black="0.025115352350000002" alpha="0.75369220889999999" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <color key="backgroundColor" red="0.4206871036" green="0.68989698519999998" blue="0.74717881939999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="o0z-1f-r5f" secondAttribute="height" multiplier="125:201" id="vIH-4R-O7g"/>
                                 </constraints>
@@ -77,7 +77,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select A News Source" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pjy-IN-L8Z">
                                 <rect key="frame" x="16" y="104" width="343" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.067940310239999996" green="0.80669981059999996" blue="0.1151493634" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" alpha="0.65000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rUz-AN-099">
@@ -107,7 +107,7 @@
                                 </constraints>
                             </pickerView>
                         </subviews>
-                        <color key="backgroundColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.25752103409999999" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                        <color key="backgroundColor" red="0.8424579244" green="0.92018285529999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="ze6-ZQ-q2r" firstAttribute="leading" secondItem="txl-0e-oIw" secondAttribute="leading" id="43Q-3G-jj1"/>
                             <constraint firstAttribute="trailing" secondItem="ze6-ZQ-q2r" secondAttribute="trailing" id="4KY-8O-eUR"/>
