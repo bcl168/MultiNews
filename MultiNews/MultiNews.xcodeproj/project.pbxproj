@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		093463531E68DEE700F98D2A /* WebviewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 093463521E68DEE700F98D2A /* WebviewVC.m */; };
 		60C606DF1E68CD15006D8453 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C606DE1E68CD15006D8453 /* main.m */; };
 		60C606E21E68CD15006D8453 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C606E11E68CD15006D8453 /* AppDelegate.m */; };
 		60C606E51E68CD15006D8453 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C606E41E68CD15006D8453 /* ViewController.m */; };
@@ -76,6 +77,8 @@
 				60C606E11E68CD15006D8453 /* AppDelegate.m */,
 				60C606E31E68CD15006D8453 /* ViewController.h */,
 				60C606E41E68CD15006D8453 /* ViewController.m */,
+				093463511E68DEE700F98D2A /* WebviewVC.h */,
+				093463521E68DEE700F98D2A /* WebviewVC.m */,
 				60C606E61E68CD15006D8453 /* Main.storyboard */,
 				60C606E91E68CD15006D8453 /* Assets.xcassets */,
 				60C606EB1E68CD15006D8453 /* LaunchScreen.storyboard */,
@@ -168,6 +171,7 @@
 				60C606E51E68CD15006D8453 /* ViewController.m in Sources */,
 				60C606E21E68CD15006D8453 /* AppDelegate.m in Sources */,
 				60C606FA1E68CFD6006D8453 /* NewsFeed.m in Sources */,
+				093463531E68DEE700F98D2A /* WebviewVC.m in Sources */,
 				60C606DF1E68CD15006D8453 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
