@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		093463531E68DEE700F98D2A /* WebviewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 093463521E68DEE700F98D2A /* WebviewVC.m */; };
+		093463531E68DEE700F98D2A /* (null) in Sources */ = {isa = PBXBuildFile; };
 		60C606DF1E68CD15006D8453 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C606DE1E68CD15006D8453 /* main.m */; };
 		60C606E21E68CD15006D8453 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C606E11E68CD15006D8453 /* AppDelegate.m */; };
 		60C606E51E68CD15006D8453 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C606E41E68CD15006D8453 /* ViewController.m */; };
@@ -19,7 +19,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		001D1FED1E68D67300ABA460 /* SecretKey.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecretKey.h; sourceTree = "<group>"; };
 		60C606DA1E68CD15006D8453 /* MultiNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultiNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60C606DE1E68CD15006D8453 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		60C606E01E68CD15006D8453 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -34,7 +33,7 @@
 		60C606F51E68CFD6006D8453 /* Article.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Article.m; sourceTree = "<group>"; };
 		60C606F61E68CFD6006D8453 /* NewsFeed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsFeed.h; sourceTree = "<group>"; };
 		60C606F71E68CFD6006D8453 /* NewsFeed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsFeed.m; sourceTree = "<group>"; };
-		60C606F81E68CFD6006D8453 /* SecretKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecretKey.h; sourceTree = "<group>"; };
+		F95205771E69054C008898A4 /* SecretKey.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecretKey.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,14 +70,11 @@
 				60C606F51E68CFD6006D8453 /* Article.m */,
 				60C606F61E68CFD6006D8453 /* NewsFeed.h */,
 				60C606F71E68CFD6006D8453 /* NewsFeed.m */,
-				60C606F81E68CFD6006D8453 /* SecretKey.h */,
-				001D1FED1E68D67300ABA460 /* SecretKey.h */,
+				F95205771E69054C008898A4 /* SecretKey.h */,
 				60C606E01E68CD15006D8453 /* AppDelegate.h */,
 				60C606E11E68CD15006D8453 /* AppDelegate.m */,
 				60C606E31E68CD15006D8453 /* ViewController.h */,
 				60C606E41E68CD15006D8453 /* ViewController.m */,
-				093463511E68DEE700F98D2A /* WebviewVC.h */,
-				093463521E68DEE700F98D2A /* WebviewVC.m */,
 				60C606E61E68CD15006D8453 /* Main.storyboard */,
 				60C606E91E68CD15006D8453 /* Assets.xcassets */,
 				60C606EB1E68CD15006D8453 /* LaunchScreen.storyboard */,
@@ -171,7 +167,7 @@
 				60C606E51E68CD15006D8453 /* ViewController.m in Sources */,
 				60C606E21E68CD15006D8453 /* AppDelegate.m in Sources */,
 				60C606FA1E68CFD6006D8453 /* NewsFeed.m in Sources */,
-				093463531E68DEE700F98D2A /* WebviewVC.m in Sources */,
+				093463531E68DEE700F98D2A /* (null) in Sources */,
 				60C606DF1E68CD15006D8453 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
