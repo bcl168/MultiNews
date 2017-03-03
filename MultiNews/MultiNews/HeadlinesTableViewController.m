@@ -8,6 +8,7 @@
 
 #import "HeadlinesTableViewController.h"
 #import "DetailViewController.h"
+#define  darkBlueColor colorWithRed:55/255.0f green:120/255.0f blue:255/255.0f alpha:1.0
 
 @interface HeadlinesTableViewController ()
 
@@ -22,6 +23,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    // set font and color for navigation title
+    NSArray *keys = [NSArray arrayWithObjects: NSForegroundColorAttributeName, NSFontAttributeName, nil];
+    NSArray *objs = [NSArray arrayWithObjects: [UIColor darkGrayColor], [UIFont fontWithName:@"Palatino" size:20.0f], nil];
+    self.navigationController.navigationBar.titleTextAttributes = [NSDictionary dictionaryWithObjects:objs forKeys:keys];
     
     _newsfeed = [[NewsFeed alloc] init];
     _newsfeed.delegate = self;
@@ -109,6 +115,10 @@
     
     // Get a recycled table row
     HeadLineTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"myCell" forIndexPath:indexPath];
+    
+    // set font and color for navigation title
+    cell.headline.font = [UIFont fontWithName:@"Palatino" size:20.0f];
+    cell.headline.textColor = [UIColor darkBlueColor];
 
     Article *article = [_articles objectAtIndex:indexPath.row];
     
@@ -162,6 +172,7 @@
     // Initialize the DetailViewController
     DetailViewController *controller = [[DetailViewController alloc] init];
     controller.url = [NSURL URLWithString:article.articleURL];
+    controller.title = self.newsSourceTitle;
     
     // Display the DetailViewController.
     [self.navigationController pushViewController:controller animated:YES];

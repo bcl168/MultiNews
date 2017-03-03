@@ -14,5 +14,6 @@
 
 @interface HeadlinesTableViewController : UITableViewController <NewsFeedDelegate>
 @property (nonatomic, strong) NSString *newsSource;
+@property (nonatomic, strong) NSString *newsSourceTitle;
 
 @end

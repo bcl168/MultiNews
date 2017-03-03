@@ -26,6 +26,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
+    // set font and color for navigation title
+    NSArray *keys = [NSArray arrayWithObjects: NSForegroundColorAttributeName, NSFontAttributeName, nil];
+    NSArray *objs = [NSArray arrayWithObjects: [UIColor darkGrayColor], [UIFont fontWithName:@"HelveticaNeue" size:20.0f], nil];
+    self.navigationController.navigationBar.titleTextAttributes = [NSDictionary dictionaryWithObjects:objs forKeys:keys];
     
     _newsSourceNames = @[@"Associated Press", @"BBC News", @"CNBC", @"CNN", @"Google News", @"IGN", @"Mirror", @"Recode", @"TechCrunch", @"TechRadar"];
     _newsSourceIds = @[@"associated-press", @"bbc-news", @"cnbc", @"cnn", @"google-news", @"ign", @"mirror", @"recode", @"techcrunch", @"techradar"];
@@ -72,6 +77,8 @@
 {
     HeadlinesTableViewController *controller = segue.destinationViewController;
     controller.newsSource = _newsSourceIds[_newsSourceIndex];
+    controller.newsSourceTitle = _newsSourceNames[_newsSourceIndex];
+    controller.title = [NSString stringWithFormat:@"%@ Top Stories",_newsSourceNames[_newsSourceIndex]];
 }
 
 @end

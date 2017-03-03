@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="fC3-AD-wT7">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="fC3-AD-wT7">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Headlines Table View Controller-->
+        <!--Top Headlines-->
         <scene sceneID="bhg-lG-crj">
             <objects>
                 <tableViewController id="Lv1-1B-DhU" customClass="HeadlinesTableViewController" sceneMemberID="viewController">
@@ -24,12 +24,13 @@
                             <outlet property="delegate" destination="Lv1-1B-DhU" id="Acc-dt-hdQ"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Top Headlines" id="zkv-sv-g04"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CSh-fC-0gP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1790" y="238"/>
         </scene>
-        <!--WebviewVC-->
+        <!--Detail View Controller-->
         <scene sceneID="2Qk-ZL-yLf">
             <objects>
                 <viewController id="VFT-Hu-LoG" customClass="DetailViewController" sceneMemberID="viewController">
@@ -87,7 +88,7 @@
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select A News Source" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pjy-IN-L8Z">
                                 <rect key="frame" x="16" y="152" width="343" height="48"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
