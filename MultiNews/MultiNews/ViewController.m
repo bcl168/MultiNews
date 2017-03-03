@@ -78,6 +78,7 @@
     HeadlinesTableViewController *controller = segue.destinationViewController;
     controller.newsSource = _newsSourceIds[_newsSourceIndex];
     controller.newsSourceTitle = _newsSourceNames[_newsSourceIndex];
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
     controller.title = [NSString stringWithFormat:@"%@ Top Stories",_newsSourceNames[_newsSourceIndex]];
 }
 

@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="fC3-AD-wT7">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="fC3-AD-wT7">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -48,7 +48,7 @@
             </objects>
             <point key="canvasLocation" x="2620" y="238"/>
         </scene>
-        <!--View Controller-->
+        <!--MultiNews-->
         <scene sceneID="zi6-dJ-zns">
             <objects>
                 <viewController id="Ndb-T6-XM6" customClass="ViewController" sceneMemberID="viewController">
@@ -132,7 +132,7 @@
                             <constraint firstItem="Pjy-IN-L8Z" firstAttribute="top" secondItem="qgK-Tz-ynk" secondAttribute="bottom" constant="88" id="uIO-TM-gsM"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Ghg-kh-hQ5"/>
+                    <navigationItem key="navigationItem" title="MultiNews" id="Ghg-kh-hQ5"/>
                     <connections>
                         <outlet property="newsPickerView" destination="ze6-ZQ-q2r" id="63g-jq-Zm1"/>
                     </connections>

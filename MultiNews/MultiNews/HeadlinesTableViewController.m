@@ -173,7 +173,7 @@
     DetailViewController *controller = [[DetailViewController alloc] init];
     controller.url = [NSURL URLWithString:article.articleURL];
     controller.title = self.newsSourceTitle;
-    
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
     // Display the DetailViewController.
     [self.navigationController pushViewController:controller animated:YES];
 }
