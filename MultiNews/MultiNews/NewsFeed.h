@@ -12,7 +12,7 @@
 
 @protocol NewsFeedDelegate <NSObject>
 
-- (void) didGetArticles:(NSArray *) articles;
+- (void) didGetArticles:(NSMutableArray *) articles;
 
 @end
 

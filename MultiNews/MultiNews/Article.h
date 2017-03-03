@@ -12,9 +12,10 @@
 
 @interface Article : NSObject
 
-@property (nonatomic, weak) NSString *headlines;
-@property (nonatomic, weak) NSString *blurb;
-@property (nonatomic, weak) NSString *articleURL;
-@property (nonatomic, weak) NSString *imageURL;
+@property (nonatomic, strong) NSString *headlines;
+@property (nonatomic, strong) NSString *blurb;
+@property (nonatomic, strong) NSString *articleURL;
+@property (nonatomic, strong) NSString *imageURL;
+@property (nonatomic, strong) NSData *imageData;
 
 @end

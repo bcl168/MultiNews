@@ -29,7 +29,7 @@
     //  latest      Requests a list of the source's headlines sorted in chronological order, newest first.
     //  popular     Requests a list of the source's current most popular or currently trending headlines.
     //
-    NSString *string = [[NSString alloc] initWithFormat:@"https://newsapi.org/v1/articles?source=%@&sortBy=popular&apiKey={%@}", newsSourceName, API_KEY];
+    NSString *string = [[NSString alloc] initWithFormat:@"https://newsapi.org/v1/articles?source=%@&sortBy=top&apiKey=%@", newsSourceName, API_KEY];
     NSURL *URL = [NSURL URLWithString:string];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:URL];
     [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
@@ -37,15 +37,15 @@
     NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
     [[session dataTaskWithRequest:request
                 completionHandler:^(NSData *data, NSURLResponse * response, NSError * error)
-                                    {
-                                        NSDictionary *newsData = [NSJSONSerialization JSONObjectWithData:data
-                                                                                                   options:kNilOptions
-                                                                                                     error:nil];
-                                        dispatch_async(dispatch_get_main_queue(),
-                                                       ^{
-                                                           [self.delegate didGetArticles:[self parseNewsData:newsData]];
-                                                       });
-                                    }] resume];
+                {
+                    NSDictionary *newsData = [NSJSONSerialization JSONObjectWithData:data
+                                                                             options:kNilOptions
+                                                                               error:nil];
+                    dispatch_async(dispatch_get_main_queue(),
+                     ^{
+                         [self.delegate didGetArticles:[self parseNewsData:newsData]] ;
+                     });
+                }] resume];
 }
 
 #pragma mark - Private Methods
@@ -59,15 +59,18 @@
 {
     NSArray *newsArticleArray = newsData[@"articles"];
     NSMutableArray *articles = [[NSMutableArray alloc] init];
-
+    
     for (NSDictionary *articleData in newsArticleArray)
     {
         Article *article = [[Article alloc] init];
-        
+
         article.headlines = articleData[@"title"];
         article.blurb = articleData[@"description"];
         article.articleURL = articleData[@"url"];
+        
         article.imageURL = articleData[@"urlToImage"];
+        NSURL *url = [NSURL URLWithString:article.imageURL];
+        article.imageData = [[NSData alloc] initWithContentsOfURL:url];
         
         [articles addObject:article];
     }
