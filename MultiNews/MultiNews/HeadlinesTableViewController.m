@@ -16,7 +16,6 @@
 {
     NSMutableArray *_articles;
     NewsFeed *_newsfeed;
-    NSURLSession *_session;
 }
 
 
@@ -26,9 +25,6 @@
     
     _newsfeed.delegate = self;
     [_newsfeed getArticles:@"cnn"];
-    
-    NSURLSessionConfiguration *defaultConfiguration = [NSURLSessionConfiguration defaultSessionConfiguration];
-    _session = [NSURLSession sessionWithConfiguration:defaultConfiguration delegate:nil delegateQueue:nil];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -69,26 +65,31 @@
     Article *article = [_articles objectAtIndex:indexPath.row];
     
     // Configure the cell...
-    if (article.imageData == nil) {
-
-        NSURL *imgURL = [NSURL URLWithString:article.imageURL];
-        NSURLSessionDataTask *task = [_session dataTaskWithURL:imgURL
-                  completionHandler:^(NSData *data, NSURLResponse *response, NSError *error)
-                  {
-                      article.imageData = data;
-                      cell.articleImage.image = [[UIImage alloc] initWithData:article.imageData];
-                  }];
-        [task resume];
+    if (article.imageData == nil)
+    {
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),
+                       ^{
+                           NSURL *imageURL = [NSURL URLWithString:article.imageURL];
+                           NSData *imageData = [NSData dataWithContentsOfURL:imageURL];
+                           
+                           //This is your completion handler
+                           dispatch_sync(dispatch_get_main_queue(),
+                                         ^{
+                                             article.imageData = imageData;
+                                             cell.articleImage.image = [[UIImage alloc] initWithData:article.imageData];
+                                         });
+                           
+                           
+                       });
     }
     else
-           cell.articleImage.image = [UIImage imageWithData:article.imageData];
+        cell.articleImage.image = [UIImage imageWithData:article.imageData];
     
     cell.headline.text = article.headlines;
     cell.summary.text = article.blurb;
     
     return cell;
 }
-
 
 
 
