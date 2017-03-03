@@ -26,9 +26,6 @@
     _newsfeed.delegate = self;
     [_newsfeed getArticles:@"cnn"];
     
-    NSURLSessionConfiguration *defaultConfiguration = [NSURLSessionConfiguration defaultSessionConfiguration];
-    _session = [NSURLSession sessionWithConfiguration:defaultConfiguration delegate:nil delegateQueue:nil];
-    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -104,14 +101,13 @@
         [task resume];
     }
     else
-           cell.articleImage.image = [UIImage imageWithData:article.imageData];
+        cell.articleImage.image = [UIImage imageWithData:article.imageData];
     
     cell.headline.text = article.headlines;
     cell.summary.text = article.blurb;
     
     return cell;
 }
-
 
 
 

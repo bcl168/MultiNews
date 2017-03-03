@@ -47,7 +47,7 @@
 		60C606F51E68CFD6006D8453 /* Article.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Article.m; sourceTree = "<group>"; };
 		60C606F61E68CFD6006D8453 /* NewsFeed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsFeed.h; sourceTree = "<group>"; };
 		60C606F71E68CFD6006D8453 /* NewsFeed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsFeed.m; sourceTree = "<group>"; };
-		F95205771E69054C008898A4 /* SecretKey.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecretKey.h; sourceTree = "<group>"; };
+		F9E54D4A1E6933B700A08FA9 /* SecretKey.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecretKey.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,9 +84,9 @@
 				60C606F51E68CFD6006D8453 /* Article.m */,
 				60C606F61E68CFD6006D8453 /* NewsFeed.h */,
 				60C606F71E68CFD6006D8453 /* NewsFeed.m */,
+				F9E54D4A1E6933B700A08FA9 /* SecretKey.h */,
 				09EA85831E691D4300186A7C /* DetailViewController.h */,
 				09EA85841E691D4300186A7C /* DetailViewController.m */,
-				F95205771E69054C008898A4 /* SecretKey.h */,
 				60C606E01E68CD15006D8453 /* AppDelegate.h */,
 				60C606E11E68CD15006D8453 /* AppDelegate.m */,
 				001D20191E690A8A00ABA460 /* Headline.h */,
