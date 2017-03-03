@@ -10,7 +10,6 @@
 		001D20141E6909EA00ABA460 /* HeadLineTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 001D20121E6909EA00ABA460 /* HeadLineTableViewCell.m */; };
 		001D20151E6909EA00ABA460 /* HeadLineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 001D20131E6909EA00ABA460 /* HeadLineTableViewCell.xib */; };
 		001D20181E6909F700ABA460 /* HeadlinesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 001D20171E6909F700ABA460 /* HeadlinesTableViewController.m */; };
-		001D201B1E690A8A00ABA460 /* Headline.m in Sources */ = {isa = PBXBuildFile; fileRef = 001D201A1E690A8A00ABA460 /* Headline.m */; };
 		093463531E68DEE700F98D2A /* (null) in Sources */ = {isa = PBXBuildFile; };
 		09EA85851E691D4300186A7C /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EA85841E691D4300186A7C /* DetailViewController.m */; };
 		60C606DF1E68CD15006D8453 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C606DE1E68CD15006D8453 /* main.m */; };
@@ -29,8 +28,6 @@
 		001D20131E6909EA00ABA460 /* HeadLineTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeadLineTableViewCell.xib; sourceTree = "<group>"; };
 		001D20161E6909F700ABA460 /* HeadlinesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeadlinesTableViewController.h; sourceTree = "<group>"; };
 		001D20171E6909F700ABA460 /* HeadlinesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeadlinesTableViewController.m; sourceTree = "<group>"; };
-		001D20191E690A8A00ABA460 /* Headline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Headline.h; sourceTree = "<group>"; };
-		001D201A1E690A8A00ABA460 /* Headline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Headline.m; sourceTree = "<group>"; };
 		09EA85831E691D4300186A7C /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		09EA85841E691D4300186A7C /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		60C606DA1E68CD15006D8453 /* MultiNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultiNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,8 +86,6 @@
 				09EA85841E691D4300186A7C /* DetailViewController.m */,
 				60C606E01E68CD15006D8453 /* AppDelegate.h */,
 				60C606E11E68CD15006D8453 /* AppDelegate.m */,
-				001D20191E690A8A00ABA460 /* Headline.h */,
-				001D201A1E690A8A00ABA460 /* Headline.m */,
 				60C606E31E68CD15006D8453 /* ViewController.h */,
 				60C606E41E68CD15006D8453 /* ViewController.m */,
 				001D20111E6909EA00ABA460 /* HeadLineTableViewCell.h */,
@@ -194,7 +189,6 @@
 				093463531E68DEE700F98D2A /* (null) in Sources */,
 				09EA85851E691D4300186A7C /* DetailViewController.m in Sources */,
 				001D20181E6909F700ABA460 /* HeadlinesTableViewController.m in Sources */,
-				001D201B1E690A8A00ABA460 /* Headline.m in Sources */,
 				001D20141E6909EA00ABA460 /* HeadLineTableViewCell.m in Sources */,
 				60C606DF1E68CD15006D8453 /* main.m in Sources */,
 			);
