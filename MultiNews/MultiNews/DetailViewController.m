@@ -17,13 +17,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-//    self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    UIBarButtonItem *returnToMain = [[UIBarButtonItem alloc] initWithTitle:@"Main Menu" style:UIBarButtonItemStylePlain target:self action:@selector(returnToMainMenu)];
+    self.navigationItem.rightBarButtonItem = returnToMain;
     WKWebViewConfiguration *configuration = [[WKWebViewConfiguration alloc] init];
     WKWebView *webView = [[WKWebView alloc] initWithFrame:[[UIScreen mainScreen]bounds] configuration:configuration];
     webView.navigationDelegate = self;
     NSURLRequest *request = [NSURLRequest requestWithURL:self.url];
     [webView loadRequest:request];
     [self.view addSubview:webView];
+}
+
+- (void)returnToMainMenu {
+    NSMutableArray *allViewControllers = [NSMutableArray arrayWithArray:[self.navigationController viewControllers]];
+    for (UIViewController *aViewController in allViewControllers) {
+        if ([aViewController isKindOfClass:[ViewController class]]) {
+            [self.navigationController popToViewController:aViewController animated:YES];
+        }
+    }
 }
 
 - (void)didReceiveMemoryWarning {

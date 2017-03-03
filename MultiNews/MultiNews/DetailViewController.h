@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <WebKit/WebKit.h>
+#import "ViewController.h"
 
 @interface DetailViewController : UIViewController<WKNavigationDelegate>
 
