@@ -13,6 +13,6 @@
 #import "NewsFeed.h"
 
 @interface HeadlinesTableViewController : UITableViewController <NewsFeedDelegate>
-
+@property (nonatomic, strong) NSString *newsSource;
 
 @end
