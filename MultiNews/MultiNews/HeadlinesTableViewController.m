@@ -16,7 +16,6 @@
 {
     NSMutableArray *_articles;
     NewsFeed *_newsfeed;
-    NSURLSession *_session;
 }
 
 
@@ -71,13 +70,37 @@
     // Configure the cell...
     if (article.imageData == nil) {
 
+        NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+        AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
+        
+        NSURL *URL = [NSURL URLWithString:@"http://example.com/download.zip"];
+        NSURLRequest *request = [NSURLRequest requestWithURL:URL];
+        
+        NSURLSessionDownloadTask *downloadTask = [manager downloadTaskWithRequest:request progress:nil destination:^NSURL *(NSURL *targetPath, NSURLResponse *response) {
+            NSURL *documentsDirectoryURL = [[NSFileManager defaultManager] URLForDirectory:NSDocumentDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:NO error:nil];
+            return [documentsDirectoryURL URLByAppendingPathComponent:[response suggestedFilename]];
+        } completionHandler:^(NSURLResponse *response, NSURL *filePath, NSError *error) {
+            NSLog(@"File downloaded to: %@", filePath);
+        }];
+        [downloadTask resume];        
+        
+        
+        
+        
+        
         NSURL *imgURL = [NSURL URLWithString:article.imageURL];
-        NSURLSessionDataTask *task = [_session dataTaskWithURL:imgURL
-                  completionHandler:^(NSData *data, NSURLResponse *response, NSError *error)
-                  {
-                      article.imageData = data;
-                      cell.articleImage.image = [[UIImage alloc] initWithData:article.imageData];
-                  }];
+        NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
+                                          
+        NSURLSessionDownloadTask *task = [session downloadTaskWithURL: imgURL completionHandler:^[(NSURL *location, NSURLResponse *response, NSError *error) {
+//            <#code#>
+        }]];
+                                          
+                                          
+//                                          downloadTaskWithURL: imgURL completionHandler:^(NSData *data, NSURLResponse *response, NSError *error)
+//              {
+//                  article.imageData = data;
+//                  cell.articleImage.image = [[UIImage alloc] initWithData:article.imageData];
+//              }];
         [task resume];
     }
     else
