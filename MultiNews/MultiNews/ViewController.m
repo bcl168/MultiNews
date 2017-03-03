@@ -39,6 +39,10 @@
     self.newsPickerView.dataSource = self;
     self.newsPickerView.delegate = self;
 
+    NewsFeed *newsFeed = [[NewsFeed alloc] init];
+    newsFeed.delegate = self;
+    [newsFeed getNewsSources];
+    
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -50,8 +54,6 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
-    _newsSourceIndex = [[NSUserDefaults standardUserDefaults]integerForKey:@"LastSelected"];
-    [self.newsPickerView selectRow:_newsSourceIndex inComponent:0 animated:NO];
 }
 
 -(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
@@ -82,6 +84,48 @@
     controller.newsSourceTitle = _newsSourceNames[_newsSourceIndex];
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
     controller.title = [NSString stringWithFormat:@"%@ Top Stories",_newsSourceNames[_newsSourceIndex]];
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Delegate method called by NewsFeed when it retrieved all the news sources.
+//
+//////////////////////////////////////////////////////////////////////////////////////////
+- (void) didGetNewsSources:(NSMutableArray *)sourceNames
+                       and:(NSMutableArray *)sourceIds
+{
+    _newsSourceNames = sourceNames;
+    _newsSourceIds = sourceIds;
+    
+    self.newsPickerView.dataSource = self;
+    self.newsPickerView.delegate = self;
+
+    _newsSourceIndex = [[NSUserDefaults standardUserDefaults]integerForKey:@"LastSelected"];
+    [self.newsPickerView selectRow:_newsSourceIndex inComponent:0 animated:NO];
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Delegate method called by NewsFeed when it failed to retrieve news articles.
+//
+//////////////////////////////////////////////////////////////////////////////////////////
+- (void) didGetNewsFeedError:(NSString *) errorMsg
+{
+    // Initialize the controller for displaying the message
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@" "
+                                                                   message:errorMsg
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+    
+    // Create an OK button
+    UIAlertAction* okButton = [UIAlertAction actionWithTitle:@"OK"
+                                                       style:UIAlertActionStyleDefault
+                                                     handler:nil];
+    
+    // Add the button to the controller
+    [alert addAction:okButton];
+    
+    // Display the alert controller
+    [self presentViewController:alert animated:YES completion:nil];
 }
 
 @end

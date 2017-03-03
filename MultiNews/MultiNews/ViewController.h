@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NewsFeed.h"
 
-@interface ViewController : UIViewController<UIPickerViewDataSource, UIPickerViewDelegate>
+@interface ViewController : UIViewController<UIPickerViewDataSource, UIPickerViewDelegate, NewsFeedDelegate>
 @property (strong, nonatomic) IBOutlet UIPickerView *newsPickerView;
 
 @property (strong, nonatomic) NSArray *newsData;

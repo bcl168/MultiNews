@@ -12,8 +12,11 @@
 
 @protocol NewsFeedDelegate <NSObject>
 
-- (void) didGetArticles:(NSMutableArray *) articles;
-- (void) didGetNewsFeedError:(NSString *) errorMsg;
+- (void) didGetNewsFeedError:(NSString *)errorMsg;
+
+@optional
+- (void) didGetArticles:(NSMutableArray *)articles;
+- (void) didGetNewsSources:(NSMutableArray *)sourceNames and:(NSMutableArray *)sourceIds;
 
 @end
 
@@ -22,6 +25,7 @@
 
 @property (strong, nonatomic) id<NewsFeedDelegate> delegate;
 
-- (void) getArticlesFrom:(NSString *) newsSourceName;
+- (void) getArticlesFrom:(NSString *)newsSourceName;
+- (void) getNewsSources;
 
 @end
