@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "HeadLineTableViewCell.h"
+#import "Article.h"
 #import "Headline.h"
 #import "NewsFeed.h"
 

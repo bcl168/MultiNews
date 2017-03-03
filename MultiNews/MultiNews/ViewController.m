@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "HeadlinesTableViewController.h"
 
 @interface ViewController ()
 
@@ -20,6 +21,10 @@
     self.newsData = @[@"cnn", @"fox"];
     self.newsPickerView.dataSource = self;
     self.newsPickerView.delegate = self;
+    
+    
+    
+    
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -33,6 +38,10 @@
     [self.newsPickerView selectRow:lastSelected inComponent:0 animated:NO];
     
     
+}
+- (IBAction)getStoriesButtonTapped:(UIButton *)sender {
+    HeadlinesTableViewController *headlineTVC = [[HeadlinesTableViewController alloc]init];
+    [self.navigationController pushViewController: headlineTVC animated:YES];
 }
 
 -(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
