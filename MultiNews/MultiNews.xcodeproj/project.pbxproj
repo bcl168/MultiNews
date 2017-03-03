@@ -18,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		001D1FED1E68D67300ABA460 /* SecretKey.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecretKey.h; sourceTree = "<group>"; };
 		60C606DA1E68CD15006D8453 /* MultiNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultiNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60C606DE1E68CD15006D8453 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		60C606E01E68CD15006D8453 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -70,6 +71,7 @@
 				60C606F61E68CFD6006D8453 /* NewsFeed.h */,
 				60C606F71E68CFD6006D8453 /* NewsFeed.m */,
 				60C606F81E68CFD6006D8453 /* SecretKey.h */,
+				001D1FED1E68D67300ABA460 /* SecretKey.h */,
 				60C606E01E68CD15006D8453 /* AppDelegate.h */,
 				60C606E11E68CD15006D8453 /* AppDelegate.m */,
 				60C606E31E68CD15006D8453 /* ViewController.h */,
@@ -321,6 +323,7 @@
 				60C606F31E68CD15006D8453 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
