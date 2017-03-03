@@ -37,15 +37,15 @@
     NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
     [[session dataTaskWithRequest:request
                 completionHandler:^(NSData *data, NSURLResponse * response, NSError * error)
-      {
-      NSDictionary *newsData = [NSJSONSerialization JSONObjectWithData:data
-                                                               options:kNilOptions
-                                                                 error:nil];
-      dispatch_async(dispatch_get_main_queue(),
+                {
+                    NSDictionary *newsData = [NSJSONSerialization JSONObjectWithData:data
+                                                                             options:kNilOptions
+                                                                               error:nil];
+                    dispatch_async(dispatch_get_main_queue(),
                      ^{
                          [self.delegate didGetArticles:[self parseNewsData:newsData]] ;
                      });
-      }] resume];
+                }] resume];
 }
 
 #pragma mark - Private Methods
@@ -61,16 +61,19 @@
     NSMutableArray *articles = [[NSMutableArray alloc] init];
     
     for (NSDictionary *articleData in newsArticleArray)
-        {
+    {
         Article *article = [[Article alloc] init];
-        
+
         article.headlines = articleData[@"title"];
         article.blurb = articleData[@"description"];
         article.articleURL = articleData[@"url"];
+        
         article.imageURL = articleData[@"urlToImage"];
+        NSURL *url = [NSURL URLWithString:article.imageURL];
+        article.imageData = [[NSData alloc] initWithContentsOfURL:url];
         
         [articles addObject:article];
-        }
+    }
     
     return articles;
 }
