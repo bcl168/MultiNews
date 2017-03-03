@@ -24,7 +24,7 @@
     _newsfeed = [[NewsFeed alloc]init];
     
     _newsfeed.delegate = self;
-    [_newsfeed getArticles:self.newsSource];
+    [_newsfeed getArticlesFrom:self.newsSource];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -40,6 +40,24 @@
     [self.tableView reloadData];
 }
 
+- (void) didGetNewsFeedError:(NSString *) errorMsg
+{
+    // Initialize the controller for displaying the message
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@" "
+                                                                   message:errorMsg
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+    
+    // Create an OK button
+    UIAlertAction* okButton = [UIAlertAction actionWithTitle:@"OK"
+                                                       style:UIAlertActionStyleDefault
+                                                     handler:nil];
+    
+    // Add the button to the controller
+    [alert addAction:okButton];
+    
+    // Display the alert controller
+    [self presentViewController:alert animated:YES completion:nil];
+}
 
 
 
@@ -67,27 +85,33 @@
     cell.articleImage.contentMode = UIViewContentModeScaleAspectFill;
     cell.articleImage.layer.masksToBounds=YES;
     
-    // Configure the cell...
-    if (article.imageData == nil)
+    // If the news source supplies an image and ...
+    if ([article.imageURL isKindOfClass:[NSString class]])
+    {
+        // If we haven't loaded the image yet then ...
+        if (article.imageData == nil)
         {
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),
-                       ^{
-                           NSURL *imageURL = [NSURL URLWithString:article.imageURL];
-                           NSData *imageData = [NSData dataWithContentsOfURL:imageURL];
-                           
-                           //This is your completion handler
-                           dispatch_sync(dispatch_get_main_queue(),
-                                         ^{
-                                             article.imageData = imageData;
-                                             cell.articleImage.image = [[UIImage alloc] initWithData:article.imageData];
-                                         });
-                           
-                           
-                       });
+            // load the image in the background.
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),
+                           ^{
+                               NSURL *imageURL = [NSURL URLWithString:article.imageURL];
+                               NSData *imageData = [NSData dataWithContentsOfURL:imageURL];
+                               
+                               dispatch_sync(dispatch_get_main_queue(),
+                                             ^{
+                                                 // display the image and ...
+                                                 cell.articleImage.image = [[UIImage alloc] initWithData:imageData];
+                                                 // "cache" it
+                                                 article.imageData = imageData;
+                                             });
+                           });
         }
-    else
-        cell.articleImage.image = [UIImage imageWithData:article.imageData];
-    
+        // Otherwise, ...
+        else
+            // display the "cached" image
+            cell.articleImage.image = [UIImage imageWithData:article.imageData];
+    }
+
     cell.headline.text = article.headlines;
     cell.summary.text = article.blurb;
     
