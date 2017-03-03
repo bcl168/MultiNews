@@ -7,6 +7,7 @@
 //
 
 #import "HeadlinesTableViewController.h"
+#import "DetailViewController.h"
 
 @interface HeadlinesTableViewController ()
 
@@ -18,11 +19,11 @@
     NewsFeed *_newsfeed;
 }
 
-
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    _newsfeed = [[NewsFeed alloc]init];
     
+    _newsfeed = [[NewsFeed alloc] init];
     _newsfeed.delegate = self;
     [_newsfeed getArticlesFrom:self.newsSource];
     
@@ -34,12 +35,30 @@
     [self.tableView registerNib:[UINib nibWithNibName:@"HeadLineTableViewCell" bundle:nil] forCellReuseIdentifier:@"myCell"];
 }
 
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - NewsFeed Delegate Methods
+
+//////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Delegate method called by NewsFeed when it has successfully retrieved news articles.
+//
+//////////////////////////////////////////////////////////////////////////////////////////
 - (void) didGetArticles:(NSMutableArray *)articles
 {
     _articles = articles;
     [self.tableView reloadData];
 }
 
+//////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Delegate method called by NewsFeed when it failed to retrieve news articles.
+//
+//////////////////////////////////////////////////////////////////////////////////////////
 - (void) didGetNewsFeedError:(NSString *) errorMsg
 {
     // Initialize the controller for displaying the message
@@ -59,27 +78,38 @@
     [self presentViewController:alert animated:YES completion:nil];
 }
 
+#pragma mark - UITableView Data Source Delegate Methods
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-#pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+//////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Delegate method to specify the number of section in the tableView.
+//
+//////////////////////////////////////////////////////////////////////////////////////////
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
     return 1;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+//////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Delegate method to specify the number of rows in the tableView.
+//
+//////////////////////////////////////////////////////////////////////////////////////////
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
     return _articles.count;
 }
 
-
+//////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Delegate method for loading data into current row of the tableView.
+//
+//////////////////////////////////////////////////////////////////////////////////////////
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
+    // Get a recycled table row
     HeadLineTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"myCell" forIndexPath:indexPath];
+
     Article *article = [_articles objectAtIndex:indexPath.row];
     
     cell.articleImage.contentMode = UIViewContentModeScaleAspectFill;
@@ -118,52 +148,24 @@
     return cell;
 }
 
+#pragma mark - UITableView Delegate Methods
 
-
-
-/*
- // Override to support conditional editing of the table view.
- - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
- // Return NO if you do not want the specified item to be editable.
- return YES;
- }
- */
-
-/*
- // Override to support editing the table view.
- - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
- if (editingStyle == UITableViewCellEditingStyleDelete) {
- // Delete the row from the data source
- [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
- } else if (editingStyle == UITableViewCellEditingStyleInsert) {
- // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
- }
- }
- */
-
-/*
- // Override to support rearranging the table view.
- - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
- }
- */
-
-/*
- // Override to support conditional rearranging of the table view.
- - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
- // Return NO if you do not want the item to be re-orderable.
- return YES;
- }
- */
-
-/*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
+//////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Delegate method that is called when the user select a row on the tableView.
+//
+//////////////////////////////////////////////////////////////////////////////////////////
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    Article *article = [_articles objectAtIndex:indexPath.row];
+    
+    // Initialize the DetailViewController
+    DetailViewController *controller = [[DetailViewController alloc] init];
+    controller.url = [NSURL URLWithString:article.articleURL];
+    
+    // Display the DetailViewController.
+    [self.navigationController pushViewController:controller animated:YES];
+}
 
 @end
 

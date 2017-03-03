@@ -27,8 +27,8 @@
 {
     [super viewDidLoad];
     
-    _newsSourceNames = @[@"CNN", @"CNBC", @"Google News", @"IGN", @"Mirror", @"Recode", @"TechCrunch", @"TechRadar"];
-    _newsSourceIds = @[ @"cnn", @"cnbc", @"google-news", @"ign", @"mirror", @"recode", @"techcrunch", @"techradar"];
+    _newsSourceNames = @[@"Associated Press", @"BBC News", @"CNBC", @"CNN", @"Google News", @"IGN", @"Mirror", @"Recode", @"TechCrunch", @"TechRadar"];
+    _newsSourceIds = @[@"associated-press", @"bbc-news", @"cnbc", @"cnn", @"google-news", @"ign", @"mirror", @"recode", @"techcrunch", @"techradar"];
     self.newsPickerView.dataSource = self;
     self.newsPickerView.delegate = self;
 
