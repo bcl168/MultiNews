@@ -12,6 +12,7 @@
 		001D20181E6909F700ABA460 /* HeadlinesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 001D20171E6909F700ABA460 /* HeadlinesTableViewController.m */; };
 		001D201B1E690A8A00ABA460 /* Headline.m in Sources */ = {isa = PBXBuildFile; fileRef = 001D201A1E690A8A00ABA460 /* Headline.m */; };
 		093463531E68DEE700F98D2A /* (null) in Sources */ = {isa = PBXBuildFile; };
+		09EA85851E691D4300186A7C /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EA85841E691D4300186A7C /* DetailViewController.m */; };
 		60C606DF1E68CD15006D8453 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C606DE1E68CD15006D8453 /* main.m */; };
 		60C606E21E68CD15006D8453 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C606E11E68CD15006D8453 /* AppDelegate.m */; };
 		60C606E51E68CD15006D8453 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C606E41E68CD15006D8453 /* ViewController.m */; };
@@ -30,6 +31,8 @@
 		001D20171E6909F700ABA460 /* HeadlinesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeadlinesTableViewController.m; sourceTree = "<group>"; };
 		001D20191E690A8A00ABA460 /* Headline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Headline.h; sourceTree = "<group>"; };
 		001D201A1E690A8A00ABA460 /* Headline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Headline.m; sourceTree = "<group>"; };
+		09EA85831E691D4300186A7C /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		09EA85841E691D4300186A7C /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		60C606DA1E68CD15006D8453 /* MultiNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultiNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60C606DE1E68CD15006D8453 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		60C606E01E68CD15006D8453 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -81,6 +84,8 @@
 				60C606F51E68CFD6006D8453 /* Article.m */,
 				60C606F61E68CFD6006D8453 /* NewsFeed.h */,
 				60C606F71E68CFD6006D8453 /* NewsFeed.m */,
+				09EA85831E691D4300186A7C /* DetailViewController.h */,
+				09EA85841E691D4300186A7C /* DetailViewController.m */,
 				F95205771E69054C008898A4 /* SecretKey.h */,
 				60C606E01E68CD15006D8453 /* AppDelegate.h */,
 				60C606E11E68CD15006D8453 /* AppDelegate.m */,
@@ -187,6 +192,7 @@
 				60C606E21E68CD15006D8453 /* AppDelegate.m in Sources */,
 				60C606FA1E68CFD6006D8453 /* NewsFeed.m in Sources */,
 				093463531E68DEE700F98D2A /* (null) in Sources */,
+				09EA85851E691D4300186A7C /* DetailViewController.m in Sources */,
 				001D20181E6909F700ABA460 /* HeadlinesTableViewController.m in Sources */,
 				001D201B1E690A8A00ABA460 /* Headline.m in Sources */,
 				001D20141E6909EA00ABA460 /* HeadLineTableViewCell.m in Sources */,
