@@ -18,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.newsData = @[@"cnn", @"fox"];
+    self.newsData = @[@"CNN", @"fox", @"ABC News", @"CNBC", @"Google News", @"IGN", @"Mirror", @"Recode", @"TechCrunch", @"TechRadar",];
     self.newsPickerView.dataSource = self;
     self.newsPickerView.delegate = self;
     
