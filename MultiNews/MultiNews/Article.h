@@ -16,5 +16,6 @@
 @property (nonatomic, strong) NSString *blurb;
 @property (nonatomic, strong) NSString *articleURL;
 @property (nonatomic, strong) NSString *imageURL;
+@property (nonatomic, strong) NSData *imageData;
 
 @end
