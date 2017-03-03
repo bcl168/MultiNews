@@ -80,20 +80,14 @@
                                     <constraint firstAttribute="width" secondItem="o0z-1f-r5f" secondAttribute="height" multiplier="125:201" id="vIH-4R-O7g"/>
                                 </constraints>
                             </imageView>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ze6-ZQ-q2r">
-                                <rect key="frame" x="0.0" y="393" width="375" height="216"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="ze6-ZQ-q2r" secondAttribute="height" multiplier="125:72" id="okd-Xd-2VD"/>
-                                </constraints>
-                            </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select A News Source" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pjy-IN-L8Z">
-                                <rect key="frame" x="16" y="152" width="343" height="48"/>
+                                <rect key="frame" x="16" y="104" width="343" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" alpha="0.65000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rUz-AN-099">
-                                <rect key="frame" x="107" y="577" width="160" height="47"/>
+                                <rect key="frame" x="107" y="580" width="160" height="47"/>
                                 <color key="backgroundColor" red="0.067940310239999996" green="0.80669981059999996" blue="0.1151493634" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="47" id="SMn-vj-Z2G"/>
@@ -107,6 +101,12 @@
                                     <segue destination="Lv1-1B-DhU" kind="show" id="7yJ-ln-hy3"/>
                                 </connections>
                             </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ze6-ZQ-q2r">
+                                <rect key="frame" x="0.0" y="225.5" width="375" height="216"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ze6-ZQ-q2r" secondAttribute="height" multiplier="125:72" id="okd-Xd-2VD"/>
+                                </constraints>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.25752103409999999" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                         <constraints>
@@ -116,20 +116,19 @@
                             <constraint firstItem="qgK-Tz-ynk" firstAttribute="top" secondItem="VtI-N7-Mbg" secondAttribute="bottom" constant="15" id="7qz-Xo-fGm"/>
                             <constraint firstAttribute="trailing" secondItem="o0z-1f-r5f" secondAttribute="trailing" id="9Wi-fZ-Sav"/>
                             <constraint firstItem="o0z-1f-r5f" firstAttribute="leading" secondItem="txl-0e-oIw" secondAttribute="leading" id="Adw-pi-Itj"/>
-                            <constraint firstItem="Bhn-ZC-XR1" firstAttribute="top" secondItem="ze6-ZQ-q2r" secondAttribute="bottom" constant="58" id="HA6-Rs-ids"/>
+                            <constraint firstItem="ze6-ZQ-q2r" firstAttribute="centerY" secondItem="txl-0e-oIw" secondAttribute="centerY" id="BpS-1w-4i8"/>
+                            <constraint firstItem="Pjy-IN-L8Z" firstAttribute="centerX" secondItem="txl-0e-oIw" secondAttribute="centerX" id="FAM-Y4-qCX"/>
                             <constraint firstItem="uMq-nY-WxZ" firstAttribute="leading" secondItem="txl-0e-oIw" secondAttribute="leading" id="LhM-6i-UNG"/>
                             <constraint firstItem="Bhn-ZC-XR1" firstAttribute="top" secondItem="o0z-1f-r5f" secondAttribute="bottom" id="NLT-0W-D09"/>
                             <constraint firstItem="rUz-AN-099" firstAttribute="centerX" secondItem="txl-0e-oIw" secondAttribute="centerX" id="PlV-Zc-Lup"/>
                             <constraint firstItem="Pjy-IN-L8Z" firstAttribute="centerX" secondItem="VtI-N7-Mbg" secondAttribute="centerX" id="ROd-Wh-PKd"/>
                             <constraint firstItem="Pjy-IN-L8Z" firstAttribute="leading" secondItem="txl-0e-oIw" secondAttribute="leadingMargin" id="UJP-6c-fHz"/>
-                            <constraint firstItem="ze6-ZQ-q2r" firstAttribute="top" secondItem="Pjy-IN-L8Z" secondAttribute="bottom" constant="193" id="WSV-LQ-i3q"/>
                             <constraint firstItem="o0z-1f-r5f" firstAttribute="top" secondItem="qgK-Tz-ynk" secondAttribute="bottom" id="Xd9-JS-ymS"/>
-                            <constraint firstItem="Bhn-ZC-XR1" firstAttribute="top" secondItem="rUz-AN-099" secondAttribute="bottom" constant="43" id="ZQy-q4-B3I"/>
+                            <constraint firstItem="Bhn-ZC-XR1" firstAttribute="top" secondItem="rUz-AN-099" secondAttribute="bottom" constant="40" id="ZQy-q4-B3I"/>
                             <constraint firstItem="VtI-N7-Mbg" firstAttribute="top" secondItem="txl-0e-oIw" secondAttribute="topMargin" constant="28" id="bRt-dq-lMC"/>
-                            <constraint firstItem="Pjy-IN-L8Z" firstAttribute="centerX" secondItem="ze6-ZQ-q2r" secondAttribute="centerX" id="diQ-xK-pp2"/>
                             <constraint firstItem="uMq-nY-WxZ" firstAttribute="top" secondItem="qgK-Tz-ynk" secondAttribute="bottom" id="mb1-Pj-98i"/>
                             <constraint firstItem="Bhn-ZC-XR1" firstAttribute="top" secondItem="uMq-nY-WxZ" secondAttribute="bottom" id="o8T-B5-LmP"/>
-                            <constraint firstItem="Pjy-IN-L8Z" firstAttribute="top" secondItem="qgK-Tz-ynk" secondAttribute="bottom" constant="88" id="uIO-TM-gsM"/>
+                            <constraint firstItem="Pjy-IN-L8Z" firstAttribute="top" secondItem="qgK-Tz-ynk" secondAttribute="bottom" constant="40" id="uIO-TM-gsM"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="MultiNews" id="Ghg-kh-hQ5"/>
